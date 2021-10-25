@@ -1,0 +1,5 @@
+server:
+  port: 10002
+spring:
+  main:
+    banner-mode: off
