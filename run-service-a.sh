@@ -2,6 +2,8 @@
 set -euox pipefail
 
 pushd service-a
+export OTEL_SERVICE_NAME=service-a
+export OTEL_TRACES_EXPORTER=zipkin
 dapr run \
     --app-id service-a \
     --app-port 10001 \
