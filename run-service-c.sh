@@ -2,6 +2,8 @@
 set -euox pipefail
 
 pushd service-c
+export DAPR_API_PROTOCOL=grpc
+export DAPR_API_METHOD_INVOCATION_PROTOCOL=grpc
 export OTEL_SERVICE_NAME=service-c
 export OTEL_TRACES_EXPORTER=zipkin
 dapr run \
